@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title></title>
+</head>
+
+<body>
+    <header class=" w-full p-4">
+        <div class="container mx-auto ">
+            <div class="p-4 flex justify-between items-center gap-x-5">
+                <div class="">
+                    <img class="cursor-pointer" src="img/logo.svg" alt="">
+                </div>
+                <div class=" *:p-3 hidden md:flex">
+                    <input id="inp" class="border lg:w-96 rounded-lg text-center px-4" type="search"
+                        placeholder="search">
+                </div>
+                <div class="flex gap-x-5 *:cursor-pointer md:*:text-4xl  p-2">
+                    <i class="bi bi-truck"></i>
+                    <i class="bi bi-chat-square-dots"></i>
+                    <i class="bi bi-bag"></i>
+                    <i class="bi bi-heart"></i>
+                    <i class="bi bi-bell"></i>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleMenu()"
+                        class="capitalize flex justify-center text-sm md:text-base items-center md:gap-2 p-4 border-none">My
+                        Allegro <i class="bi icon bi-chevron-down ml-2 transition-transform duration-300"></i> </button>
+                    <div id="dropdown" class="absolute right-0 mt-5 hidden bg-white shadow-lg z-10 rounded w-80">
+                        <ul class="text-gray-700 p-4">
+                            <figure>
+                                <img src="img/1.svg" alt="">
+                                <figcaption class="text-center text-2xl font-bold">Welcome to Allegro!</figcaption>
+                            </figure>
+                            <li class="p-2 text-sm hover:bg-gray-200">Sign in and see your purchases, favorite offers,
+                                and notifications. On Allegro, you are at home!</li>
+                            <li class="p-4 bg-red-600 cursor-pointer text-white text-center uppercase my-3">Sign in</li>
+                            <li class="p-2 text-center ">First time on Allegro? <a class="text-sm text-white"
+                                    href="">Sign up</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="w-full">
+        <div class="container mx-auto p-4  ">
+            <div class="flex justify-between items-center ">
+                <div class="hidden lg:flex">
+                    <ul class="flex gap-x-5  *:p-2">
+                        <li class="cursor-pointer">Categories <i class="bi bi-chevron-down"></i>
+                        </li>
+                        <li class=""><a href="">Deal Zone</a></li>
+                        <li class=""><a href="">Allegro Protect</a></li>
+                        <li class=""><a href="">Best price guarantee</a></li>
+                        <li class=""><a href="">Sell on Allegro</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="img/logo2.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="w-full bg-blue-100">
+        <div class="container mx-auto p-4">
+            <!-- //////////parent////// -->
+            <div>
+                <div class="flex p-4 my-10 items-center justify-between">
+                    <h1 class="md:text-4xl font-bold">you are searching for „shopping” <span
+                            class="inline-block opacity-65 text-sm">(505 033 offers)</span></h1>
+                    <a class="p-4 uppercase font-sans text-sm md:text-base opacity-65" href=""> <i
+                            class="bi bi-heart"></i> Add search to Favorites</a>
+                </div>
+                <div class="flex gap-x-5 min-h-screen flex-col lg:flex-row">
+                    <button class="lg:hidden p-4" id="sidebar-toggle">☰</button>
+                    <!-- نوار کناری -->
+                    <div class="lg:w-1/4 w-full md:h-[260vh] bg-white bg-opacity-75 rounded-xl p-4 lg:block hidden" id="sidebar">
+                        <div class=" *:my-2 *:w-full ">
+                            <h2 class="md:text-2xl font-bold font-mono">Subcategories</h2>
+                            <p class="font-bold">popular</p>
+                            <div class="flex *:my-2 flex-wrap *:w-full">
+                                <a href="">Fashion</a>
+                                <div class="flex  cursor-pointer *:inline-block justify-between items-center">
+                                    <a href="">Women's Clothing</a><a class="opacity-65" href="">1504</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Dresses</a><a class="opacity-65" href="">132</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Haberdashery and Accessories</a><a class="opacity-65" href="">9999+</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Bags</a><a class="opacity-65" href="">9999+</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Bags</a><a class="opacity-65" href="">9999+</a>
+                                </div>
+                                <p class="font-bold">all</p>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Home and Garden</a><a class="opacity-65" href="">9999+</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Kids</a><a class="opacity-65" href="">9999+</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Clothing, Footwear, Accessories</a><a class="opacity-65"
+                                        href="">9999+</a>
+                                </div>
+                                <div class="flex cursor-pointer  *:inline-block justify-between items-center">
+                                    <a href="">Design and Antiques</a><a class="opacity-65" href="">9999+</a>
+                                </div>
+
+
+
+                                <!-- ///////more/////// -->
+                                <div id="more" class="  *:my-3  ">
+                                    <p
+                                        class="capitalize border hover:border-lime-300 font-bold p-4 text-center cursor-pointer">
+                                        more <i class="bi bi-chevron-down"></i></p>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Industry</a><a class="opacity-65" href="">8088</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Beauty</a><a class="opacity-65" href="">6531</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Sports and Travel</a><a class="opacity-65" href="">4516</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Office and Advertising</a><a class="opacity-65" href="">2547</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Automotive</a><a class="opacity-65" href="">3658</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">books</a><a class="opacity-65" href="">1245</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Supermarket</a><a class="opacity-65" href="">7489</a>
+                                    </div>
+                                    <div
+                                        class="flex cursor-pointer display  *:inline-block justify-between items-center">
+                                        <a href="">Jewelry and Watches</a><a class="opacity-65" href="">3020</a>
+                                    </div>
+
+                                </div>
+                                <p class="capitalize font-bold  cursor-pointer">filter</p>
+                                <!-- //////filtering////// -->
+                                <div>
+                                    <p class="opacity-65 text-sm">Category filters Handbags - Shopper Bags</p>
+
+                                    <p class="capitalize font-bold  cursor-pointer">color</p>
+                                    <div class="flex p-4 justify-between items-center">
+                                        <div class="flex justify-center items-center gap-x-2">
+                                            <input class="p-2 w-4 h-4" type="checkbox">
+                                            <a class="capitalize" href="">beige</a>
+                                        </div>
+                                        <div>
+                                            <a class="opacity-65" href="">9658</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex p-4 justify-between items-center">
+                                        <div class="flex justify-center items-center gap-x-2">
+                                            <input class="p-2 w-4 h-4" type="checkbox">
+                                            <a class="capitalize" href="">white</a>
+                                        </div>
+                                        <div>
+                                            <a class="opacity-65" href="">3659</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex p-4 justify-between items-center">
+                                        <div class="flex justify-center items-center gap-x-2">
+                                            <input class="p-2 w-4 h-4" type="checkbox">
+                                            <a class="capitalize" href="">blue</a>
+                                        </div>
+                                        <div>
+                                            <a class="opacity-65" href="">2365</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex p-4 justify-between items-center">
+                                        <div class="flex justify-center items-center gap-x-2">
+                                            <input class="p-2 w-4 h-4" type="checkbox">
+                                            <a class="capitalize" href="">black</a>
+                                        </div>
+                                        <div>
+                                            <a class="opacity-65" href="">9999+</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex p-4 justify-between items-center">
+                                        <div class="flex justify-center items-center gap-x-2">
+                                            <input class="p-2 w-4 h-4" type="checkbox">
+                                            <a class="capitalize" href="">red</a>
+                                        </div>
+                                        <div>
+                                            <a class="opacity-65" href="">7458</a>
+                                        </div>
+                                    </div>
+                                    <!-- derup////////    -->
+
+                                    <div class="relative z-10 w-full dropdown">
+                                        <button
+                                            class="dropdown-btn font-bold w-full px-4 py-2 rounded-md flex justify-between items-center">
+                                            style
+                                            <span class="icon transition-transform duration-300">▼</span>
+                                        </button>
+                                        <div
+                                            class="dropdown-menu  w-full bg-white shadow-md rounded-md mt-2 p-3 hidden">
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">blye</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">8457</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">red</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">7458</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">black</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">3659</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ////////////2//////////// -->
+
+                                    <div class="relative my-5 z-9 w-full dropdown">
+                                        <button
+                                            class="dropdown-btn font-bold w-full px-4 py-2 rounded-md flex justify-between items-center">
+                                            Brands zone
+                                            <span class="icon transition-transform duration-300">▼</span>
+                                        </button>
+                                        <div
+                                            class="dropdown-menu  w-full bg-white shadow-md rounded-md mt-2 p-3 hidden">
+                                            <p>Are you looking for brand-name offers from trusted stores? You will find
+                                                them here.</p>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">well-known brands</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- /////////////////3//////////////////////// -->
+
+                                    <div class="relative z-8 w-full dropdown">
+                                        <button
+                                            class="dropdown-btn font-bold w-full px-4 py-2 rounded-md flex justify-between items-center">
+                                            Gender
+                                            <span class="icon transition-transform duration-300">▼</span>
+                                        </button>
+                                        <div class="dropdown-menu w-full bg-white shadow-md rounded-md mt-2 p-3 hidden">
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">woman</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">1032</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">man</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">804</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">unisex</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">1456</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /////////////////4//////////////////////// -->
+                                    <div class="relative my-5 z-8 w-full dropdown">
+                                        <button
+                                            class="dropdown-btn font-bold w-full px-4 py-2 rounded-md flex justify-between items-center">
+                                            Main pattern
+                                            <span class="icon transition-transform duration-300">▼</span>
+                                        </button>
+                                        <div class="dropdown-menu w-full bg-white shadow-md rounded-md mt-2 p-3 hidden">
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">plain</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">3659</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">mixed designs</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">369</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">animal print</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">6985</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">print</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">3169</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /////////////////5//////////////////////// -->
+                                    <div class="relative z-8 w-full dropdown">
+                                        <button
+                                            class="dropdown-btn font-bold w-full px-4 py-2 rounded-md flex justify-between items-center">
+                                            Additional features
+                                            <span class="icon transition-transform duration-300">▼</span>
+                                        </button>
+                                        <div class="dropdown-menu w-full bg-white shadow-md rounded-md mt-2 p-3 hidden">
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">none</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">4371</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">phone pocket</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">365</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">organiser</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">5847</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">quilted</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">151</a>
+                                                </div>
+                                            </div>
+                                            <div class="flex p-4 justify-between items-center">
+                                                <div class="flex justify-center items-center gap-x-2">
+                                                    <input class="p-2 w-4 h-4" type="checkbox">
+                                                    <a class="capitalize" href="">vintage</a>
+                                                </div>
+                                                <div>
+                                                    <a class="opacity-65" href="">31</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- بخش اصلی -->
+                    <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+                        <div id="popup" class="">
+                            <div class="popup-content w-full h-full bg-white  mx-auto  rounded-lg">
+                                <button class="btn" onclick="closePopup()"><i
+                                        class="bi text-2xl bi-x-square"></i></button>
+                                <h2 id="popup-title"></h2>
+                                <p id="popup-description"></p>
+                                <img src="" alt="" id="popup-image">
+                                <span id="popup-category"></span>
+                                <span id="popup-price"></span>
+                                <div class="flex rating justify-between ">
+                                    <span class="rate block"></span>
+                                    <span class="count capitalize font-bold block"></span>
+                                </div>
+                                <button class="mt-2 mx-auto uppercase px-4 py-2 bg-blue-500 text-white rounded"> add to
+                                    cart </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- //////////parent////// -->
+        </div>
+    </main>
+    <footer class="w-full">
+
+        <div class="container p-8 mx-auto">
+            <div class="lg:flex justify-around mt-10 p-4">
+                <div>
+                    <h3 class="text-2xl font-bold">Allegro</h3>
+                    <ul class=" *:capitalize *:text-sm *:my-3">
+                        <li><a href="">About Allegro</a></li>
+                        <li><a href="">Allegro Share </a></li>
+                        <li><a href="">Advertisement </a></li>
+                        <li><a href="">Allegro Ads </a></li>
+                        <li><a href="">Allegro API </a></li>
+                        <li><a href="">Careers at Allegro </a></li>
+                        <li><a href="">Sustainable development </a></li>
+                        <li><a href="">Information about the Digital Services Act</a></li>
+                        <li><a href="">Additional information about Allegro</a></li>
+                        <li><a href="">advertising and its parameters</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold">Help center</h3>
+                    <ul class=" *:capitalize *:text-sm *:my-3">
+                        <li><a href="">Help Center for buyers</a></li>
+                        <li><a href="">Updates for buyers</a></li>
+                        <li><a href="">Ask the Community</a></li>
+                        <li><a href="">Help Center for sellers</a></li>
+                        <li><a href="">Sell on Allegro</a></li>
+                        <li><a href="">Purchase return</a></li>
+                        <li><a href="">Social media privacy policy</a></li>
+                        <li><a href="">Cookie Policy</a></li>
+                        <li><a href="">Cookie settings</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Location Sharing</a></li>
+                        <li><a href="">Security</a></li>
+                        <li><a href="">International sales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold">Services</h3>
+                    <ul class=" *:capitalize *:text-sm *:my-3">
+                        <li><a href="">Allegro Protect</a></li>
+                        <li><a href="">Allegro Academy</a></li>
+                        <li><a href="">Allegro Analytics</a></li>
+                        <li><a href="">Allegro Business</a></li>
+                        <li><a href="">Allegro Cash</a></li>
+                        <li><a href="">Allegro Lokalnie</a></li>
+                        <li><a href="">Allegro One</a></li>
+                        <li><a href="">Allegro One Fulfillment</a></li>
+                        <li><a href="">Allegro Pay Business</a></li>
+                        <li><a href="">Allegro Smart!</a></li>
+                        <li><a href="">Allegro Archive</a></li>
+                        <li><a href="">Allegro Gift Cards</a></li>
+                        <li><a href="">Allegro Coins</a></li>
+                        <li><a href="">Brands Zone</a></li>
+
+
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold">Display settings</h3>
+                    <ul class="*:capitalize *:text-sm *:my-3">
+                        <li><a href="">
+                                appearance:
+                                device theme</a></li>
+                    </ul>
+                    <h3 class="text-xl font-bold">Location settings</h3>
+                    <ul class="*:capitalize *:text-sm *:my-3">
+                        <li> Country <a class="font-bold" href="">Poland</a></li>
+                        <li> Country <a class="font-bold" href="">of delivery Poland </a></li>
+                        <li> Language <a class="font-bold" href="">English</a></li>
+                        <li> Currency <a class="font-bold" href=""> PLN</a></li>
+
+
+                    </ul>
+
+
+
+                </div>
+            </div>
+            <div class="w-full my-5 lg:flex  gap-x-10">
+                <figure class="flex justify-center *:scale-50 *:md:scale-100 md:gap-x-10">
+                    <img src="img/f3.svg" alt="">
+                    <img class="scale-125" src="img/f2.svg" alt="">
+                    <img src="img/f1.svg" alt="">
+                </figure>
+                <div class="flex mt-5 lg:mt-0 justify-center items-center gap-x-2">
+                    <i class="bi text-red-500 text-3xl bi-youtube"></i>
+                    <i class="bi text-blue-500 text-3xl bi-facebook"></i>
+                    <i class="bi text-blue-500 text-3xl bi-instagram"></i>
+                    <i class="bi text-blue-500 text-3xl bi-linkedin"></i>
+                    <i class="bi text-blue-500 text-3xl bi-github"></i>
+                    <i class="bi text-red-500 text-3xl bi-pinterest"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+    </footer>
+    <div class="bg-slate-500 flex gap-x-20 justify-between items-center w-full  p-5">
+        <figure class="flex justify-end items-center">
+            <img src="img/logo3.svg" alt="">
+        </figure>
+        <p class="p-4 rounded-lg text-white bg-white bg-opacity-5 inline">Developed by Vahid Soleimani</p>
+    </div>
+</body>
+<script src="js/main.js"></script>
+
+</html>
